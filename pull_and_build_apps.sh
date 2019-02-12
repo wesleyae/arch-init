@@ -22,7 +22,8 @@ git clone https://git.suckless.org/surf "${TOOLS_DIR}/surf"
 cd "${TOOLS_DIR}/surf" 
 sudo make clean install
 
-gcc -O barM barM.c -02 -s -lX11
+popd
+
+gcc -o barM barM.c -O2 -s -lX11
 sudo cp barM /usr/local/bin/
 
-popd
